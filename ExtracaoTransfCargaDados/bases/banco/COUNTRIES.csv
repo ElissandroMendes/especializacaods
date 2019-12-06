@@ -1,0 +1,194 @@
+COU_ID;COUNTRY_NAME
+ 000000001;Afghanistan                   
+ 000000002;Albania                       
+ 000000003;Algeria                       
+ 000000004;Andorra                       
+ 000000005;Angola                        
+ 000000006;Antigua and Barbuda           
+ 000000007;Argentina                     
+ 000000008;Armenia                       
+ 000000009;Aruba                         
+ 000000010;Australia                     
+ 000000011;Austria                       
+ 000000012;Azerbaijan                    
+ 000000013;Bahamas                       
+ 000000014;Bahrain                       
+ 000000015;Bangladesh                    
+ 000000016;Barbados                      
+ 000000017;Belarus                       
+ 000000018;Belgium                       
+ 000000019;Benin                         
+ 000000020;Bhutan                        
+ 000000021;Bolivia                       
+ 000000022;Bosnia and Herzegovina        
+ 000000023;Botswana                      
+ 000000024;Brazil                        
+ 000000025;Brunei                        
+ 000000026;Bulgaria                      
+ 000000027;Burkina Faso                  
+ 000000028;Burundi                       
+ 000000029;Cambodia                      
+ 000000030;Cameroon                      
+ 000000031;Canada                        
+ 000000032;Cape Verde                    
+ 000000033;Cayman Islands                
+ 000000034;Central African Republic      
+ 000000035;Chad                          
+ 000000036;Chile                         
+ 000000037;China                         
+ 000000038;Colombia                      
+ 000000039;Comoros                       
+ 000000040;Congo                         
+ 000000041;Cook Islands                  
+ 000000042;Costa Rica                    
+ 000000043;Croatia                       
+ 000000044;Cuba                          
+ 000000045;Cyprus                        
+ 000000046;Czech Republic                
+ 000000047;Denmark                       
+ 000000048;Djibouti                      
+ 000000049;Dominica                      
+ 000000050;Dominican Republic            
+ 000000051;East Timor                    
+ 000000052;Ecuador                       
+ 000000053;Egypt                         
+ 000000054;El Salvador                   
+ 000000055;Equatorial Guinea             
+ 000000056;Eritrea                       
+ 000000057;Estonia                       
+ 000000058;Ethiopia                      
+ 000000059;Fiji Islands                  
+ 000000060;Finland                       
+ 000000061;France                        
+ 000000062;French Guiana                 
+ 000000063;French Polynesia              
+ 000000064;Gabon                         
+ 000000065;Gambia                        
+ 000000066;Georgia                       
+ 000000067;Germany                       
+ 000000068;Ghana                         
+ 000000069;Gibraltar                     
+ 000000070;Greece                        
+ 000000071;Greenland                     
+ 000000072;Guadeloupe                    
+ 000000073;Guatemala                     
+ 000000074;Guinea                        
+ 000000075;Guinea-Bissau                 
+ 000000076;Guyana                        
+ 000000077;Haiti                         
+ 000000078;Honduras                      
+ 000000079;Hong Kong                     
+ 000000080;Hungary                       
+ 000000081;Iceland                       
+ 000000082;India                         
+ 000000083;Indonesia                     
+ 000000084;Iran                          
+ 000000085;Iraq                          
+ 000000086;Ireland                       
+ 000000087;Israel                        
+ 000000088;Italy                         
+ 000000089;Jamaica                       
+ 000000090;Japan                         
+ 000000091;Jordan                        
+ 000000092;Kazakstan                     
+ 000000093;Kenya                         
+ 000000094;Kuwait                        
+ 000000095;Kyrgyzstan                    
+ 000000096;Laos                          
+ 000000097;Latvia                        
+ 000000098;Lebanon                       
+ 000000099;Lesotho                       
+ 000000100;Liberia                       
+ 000000101;Liechtenstein                 
+ 000000102;Lithuania                     
+ 000000103;Luxembourg                    
+ 000000104;Macao                         
+ 000000105;Macedonia                     
+ 000000106;Madagascar                    
+ 000000107;Malawi                        
+ 000000108;Malaysia                      
+ 000000109;Maldives                      
+ 000000110;Mali                          
+ 000000111;Malta                         
+ 000000112;Marshall Islands              
+ 000000113;Martinique                    
+ 000000114;Mauritania                    
+ 000000115;Mauritius                     
+ 000000116;Mexico                        
+ 000000117;Moldova                       
+ 000000118;Mongolia                      
+ 000000119;Morocco                       
+ 000000120;Mozambique                    
+ 000000121;Myanmar                       
+ 000000122;Namibia                       
+ 000000123;Nepal                         
+ 000000124;Netherlands                   
+ 000000125;New Caledonia                 
+ 000000126;New Zealand                   
+ 000000127;Nicaragua                     
+ 000000128;Niger                         
+ 000000129;Nigeria                       
+ 000000130;North Korea                   
+ 000000131;Norway                        
+ 000000132;Oman                          
+ 000000133;Pakistan                      
+ 000000134;Palau                         
+ 000000135;Palestine                     
+ 000000136;Panama                        
+ 000000137;Papua New Guinea              
+ 000000138;Paraguay                      
+ 000000139;Peru                          
+ 000000140;Philippines                   
+ 000000141;Poland                        
+ 000000142;Portugal                      
+ 000000143;Puerto Rico                   
+ 000000144;Qatar                         
+ 000000145;Romania                       
+ 000000146;Russian Federation            
+ 000000147;Rwanda                        
+ 000000148;Samoa                         
+ 000000149;Saudi Arabia                  
+ 000000150;Senegal                       
+ 000000151;Seychelles                    
+ 000000152;Sierra Leone                  
+ 000000153;Singapore                     
+ 000000154;Slovakia                      
+ 000000155;Slovenia                      
+ 000000156;Solomon Islands               
+ 000000157;Somalia                       
+ 000000158;South Africa                  
+ 000000159;South Korea                   
+ 000000160;Spain                         
+ 000000161;Sri Lanka                     
+ 000000162;Sudan                         
+ 000000163;Suriname                      
+ 000000164;Swaziland                     
+ 000000165;Sweden                        
+ 000000166;Switzerland                   
+ 000000167;Syria                         
+ 000000168;Taiwan                        
+ 000000169;Tajikistan                    
+ 000000170;Tanzania                      
+ 000000171;Thailand                      
+ 000000172;Togo                          
+ 000000173;Tonga                         
+ 000000174;Trinidad and Tobago           
+ 000000175;Tunisia                       
+ 000000176;Turkey                        
+ 000000177;Turkmenistan                  
+ 000000178;Uganda                        
+ 000000179;Ukraine                       
+ 000000180;United Arab Emirates          
+ 000000181;United Kingdom                
+ 000000182;United States                 
+ 000000183;Uruguay                       
+ 000000184;Uzbekistan                    
+ 000000185;Vanuatu                       
+ 000000186;Venezuela                     
+ 000000187;Vietnam                       
+ 000000188;Virgin Islands, U.S.          
+ 000000189;Western Sahara                
+ 000000190;Yemen                         
+ 000000191;Yugoslavia                    
+ 000000192;Zambia                        
+ 000000193;Zimbabwe                      

@@ -1,0 +1,4 @@
+matricula;nome;nota_1;nota_2;nota_3;nota_4;data_atualizacao
+123;Fulano;95;96;97;90;28-09-2010
+855;Sicrano;70;75;88;100;28-09-2010
+999;Beltrano;80;85;90;60;28-09-2010

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rows>
+ <Row><MAN_CODE>BUF</MAN_CODE> <MAN_DESC>Buffalo Games</MAN_DESC> </Row>
+ <Row><MAN_CODE>CEL</MAN_CODE> <MAN_DESC>Celtic Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>CHA</MAN_CODE> <MAN_DESC>Chad Valley</MAN_DESC> </Row>
+ <Row><MAN_CODE>CIT</MAN_CODE> <MAN_DESC>Citadel Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>CLE</MAN_CODE> <MAN_DESC>Clementoni</MAN_DESC> </Row>
+ <Row><MAN_CODE>DIN</MAN_CODE> <MAN_DESC>Dino</MAN_DESC> </Row>
+ <Row><MAN_CODE>EDU</MAN_CODE> <MAN_DESC>Educa Jigsaws</MAN_DESC> </Row>
+ <Row><MAN_CODE>ESC</MAN_CODE> <MAN_DESC>Escher Jigsaws</MAN_DESC> </Row>
+ <Row><MAN_CODE>FAL</MAN_CODE> <MAN_DESC>Falcon Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>FSC</MAN_CODE> <MAN_DESC>Fx Schmidt</MAN_DESC> </Row>
+ <Row><MAN_CODE>GIB</MAN_CODE> <MAN_DESC>Gibsons Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>HAM</MAN_CODE> <MAN_DESC>James Hamilton</MAN_DESC> </Row>
+ <Row><MAN_CODE>HAS</MAN_CODE> <MAN_DESC>Hasbro</MAN_DESC> </Row>
+ <Row><MAN_CODE>HEY</MAN_CODE> <MAN_DESC>Heye Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>JIG</MAN_CODE> <MAN_DESC>Jigthings</MAN_DESC> </Row>
+ <Row><MAN_CODE>JRJ</MAN_CODE> <MAN_DESC>JR Jigsaw Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>JUM</MAN_CODE> <MAN_DESC>Jumbo Jigsaws</MAN_DESC> </Row>
+ <Row><MAN_CODE>KIN</MAN_CODE> <MAN_DESC>King International</MAN_DESC> </Row>
+ <Row><MAN_CODE>LAR</MAN_CODE> <MAN_DESC>Larsen Tray Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>LUX</MAN_CODE> <MAN_DESC>Classic DeLuxe</MAN_DESC> </Row>
+ <Row><MAN_CODE>MAS</MAN_CODE> <MAN_DESC>MasterPieces</MAN_DESC> </Row>
+ <Row><MAN_CODE>MEL</MAN_CODE> <MAN_DESC>Melissa and Doug</MAN_DESC> </Row>
+ <Row><MAN_CODE>OTT</MAN_CODE> <MAN_DESC>Otter House Jigsaws</MAN_DESC> </Row>
+ <Row><MAN_CODE>PAU</MAN_CODE> <MAN_DESC>Paul Lamond</MAN_DESC> </Row>
+ <Row><MAN_CODE>PRE</MAN_CODE> <MAN_DESC>Susan Prescot</MAN_DESC> </Row>
+ <Row><MAN_CODE>RAV</MAN_CODE> <MAN_DESC>Ravensburger</MAN_DESC> </Row>
+ <Row><MAN_CODE>SCH</MAN_CODE> <MAN_DESC>Schmidt</MAN_DESC> </Row>
+ <Row><MAN_CODE>SER</MAN_CODE> <MAN_DESC>Serendipity</MAN_DESC> </Row>
+ <Row><MAN_CODE>SUN</MAN_CODE> <MAN_DESC>SunsOut Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>TAI</MAN_CODE> <MAN_DESC>Tailten Games</MAN_DESC> </Row>
+ <Row><MAN_CODE>TDC</MAN_CODE> <MAN_DESC>TDCGames</MAN_DESC> </Row>
+ <Row><MAN_CODE>TOY</MAN_CODE> <MAN_DESC>D-Toy Jigsaws</MAN_DESC> </Row>
+ <Row><MAN_CODE>WAD</MAN_CODE> <MAN_DESC>Waddingtons</MAN_DESC> </Row>
+ <Row><MAN_CODE>WAS</MAN_CODE> <MAN_DESC>Wasgij Puzzles</MAN_DESC> </Row>
+ <Row><MAN_CODE>WHI</MAN_CODE> <MAN_DESC>White Mountain Puzzles</MAN_DESC> </Row>
+</Rows>

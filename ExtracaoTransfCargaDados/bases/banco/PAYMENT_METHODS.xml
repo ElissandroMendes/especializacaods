@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rows>
+ <Row><PAY_CODE>AMEX</PAY_CODE> <PAY_DESC>American Express</PAY_DESC> </Row>
+ <Row><PAY_CODE>CASH</PAY_CODE> <PAY_DESC>Cash</PAY_DESC> </Row>
+ <Row><PAY_CODE>CHEC</PAY_CODE> <PAY_DESC>Check</PAY_DESC> </Row>
+ <Row><PAY_CODE>MAST</PAY_CODE> <PAY_DESC>Mastercard</PAY_DESC> </Row>
+ <Row><PAY_CODE>OTHE</PAY_CODE> <PAY_DESC>Others</PAY_DESC> </Row>
+ <Row><PAY_CODE>VISA</PAY_CODE> <PAY_DESC>Visa</PAY_DESC> </Row>
+</Rows>
