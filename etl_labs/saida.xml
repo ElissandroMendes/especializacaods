@@ -1,0 +1,25 @@
+<ObterDeputadosResult>
+   <deputados>
+      <deputado>
+         <ideCadastro>73701</ideCadastro>
+         <codOrcamento>1310</codOrcamento>
+         <condicao>Titular</condicao>
+         <matricula>291</matricula>
+         <idParlamentar>1637158</idParlamentar>
+         <nome>BENEDITA SOUZA DA SILVA SAMPAIO</nome>
+         <nomeParlamentar>BENEDITA DA SILVA</nomeParlamentar>
+         <urlFoto>http://www.camara.gov.br/internet/deputado/bandep/73701.jpg</urlFoto>
+         <sexo>feminino</sexo>
+         <uf>RJ</uf>
+         <partido>PT</partido>
+         <gabinete>330</gabinete>
+         <anexo>4</anexo>
+         <fone>3215-5330</fone>
+         <email>dep.beneditadasilva@camara.leg.br</email>
+         <comissoes>
+            <titular/>
+            <suplente/>
+         </comissoes>
+      </deputado>
+   </deputados>
+</ObterDeputadosResult>

@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>CriandoDBDW</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/12/07 09:38:42.972</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/12/07 09:38:42.972</modified_date>
+    <key_for_session_key />
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>pdi_mysql_conn</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>especializacao</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc82ae7a185a51dbc7f8fcbf88e</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+  </order>
+  <step>
+    <name>Execute SQL Migrate</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>pdi_mysql_conn</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>drop database IF exists prodgames;
+
+CREATE DATABASE prodgames
+  CHARACTER SET utf8
+  COLLATE utf8_general_ci;
+
+USE prodgames;
+
+#-------------------------------------------------------------
+#DROP TABLES
+#-------------------------------------------------------------
+
+drop table IF EXISTS invoices_detail;
+drop table IF EXISTS invoices;
+drop table IF EXISTS customers;
+drop table IF EXISTS cities;
+drop table IF EXISTS countries;
+drop table IF EXISTS payment_methods;
+drop table IF EXISTS buy_methods;
+drop table IF EXISTS products;
+drop table IF EXISTS manufactures;
+
+#-------------------------------------------------------------
+#Tabela - manufactures
+#-------------------------------------------------------------
+
+CREATE TABLE manufactures
+  (
+    man_code  varchar(3)    not null,
+    man_desc  varchar(25)   not null,
+
+    CONSTRAINT pk_manufactures_1 primary key(man_code)
+  );
+
+CREATE INDEX ix_manufactures_1 ON manufactures(man_code);
+
+#-------------------------------------------------------------
+#Tabela - products
+#-------------------------------------------------------------
+
+CREATE TABLE products
+  (
+    pro_code         varchar(8)      not null,
+    man_code         varchar(3)      not null,
+    pro_name         varchar(255),
+    pro_description  varchar(4000),
+    pro_type         varchar(10),
+    pro_theme        varchar(50),
+    pro_pieces       integer,
+    pro_packaging    varchar(20),
+    pro_shape        varchar(20),
+    pro_style        varchar(20),
+    pro_buy_price    numeric(6,2),
+    pro_sel_price    numeric(6,2),
+    pro_stock        integer,
+    pro_stock_min    integer,
+    pro_stock_max    integer,
+
+    CONSTRAINT pk_products_1 primary key(pro_code,man_code),
+
+    CONSTRAINT fk_products_1 foreign key(man_code) references manufactures(man_code)
+  );
+
+CREATE INDEX ix_products_1 ON products(pro_code,man_code);
+CREATE INDEX ix_products_2 ON products(man_code);
+
+#-------------------------------------------------------------
+#Tabela - buy_methods
+#-------------------------------------------------------------
+
+CREATE TABLE buy_methods
+  (
+    buy_code  varchar(4)    not null,
+    buy_desc  varchar(25)   not null,
+
+    CONSTRAINT pk_buy_methods_1 primary key(buy_code)
+  );
+
+CREATE INDEX ix_buy_methods_1 ON buy_methods(buy_code);
+
+#-------------------------------------------------------------
+#Tabela - payment_methods
+#-------------------------------------------------------------
+
+CREATE TABLE payment_methods
+  (
+    pay_code  varchar(4)    not null,
+    pay_desc  varchar(25)   not null,
+
+    CONSTRAINT pk_payment_methods_1 primary key(pay_code)
+  );
+
+CREATE INDEX ix_payment_methods_1 ON payment_methods(pay_code);
+
+#-------------------------------------------------------------
+#Tabela - countries
+#-------------------------------------------------------------
+
+CREATE TABLE countries
+  (
+    cou_id        integer       not null,
+    country_name  varchar(30)   not null,
+
+    CONSTRAINT pk_countries_1 primary key(cou_id)
+  );
+
+CREATE INDEX ix_countries_1 ON countries(cou_id);
+
+#-------------------------------------------------------------
+#Tabela - cities
+#-------------------------------------------------------------
+
+CREATE TABLE cities
+  (
+    city_id    integer       not null,
+    city_name  varchar(30)   not null,
+    cou_id     integer       not null,
+
+    CONSTRAINT pk_cities_1 primary key(city_id),
+
+    CONSTRAINT fk_cities_1 foreign key(cou_id) references countries(cou_id)
+  );
+
+CREATE INDEX ix_cities_1 ON cities(city_id);
+CREATE INDEX ix_cities_2 ON cities(cou_id);
+
+#-------------------------------------------------------------
+##Tabela - customers
+#-------------------------------------------------------------
+
+CREATE TABLE customers
+  (
+    cus_id        integer       not null,
+    cus_name      varchar(30)   not null,
+    cus_lastname  varchar(30),
+    add_street    varchar(50),
+    add_zipcode   varchar(10),
+    city_id       integer       not null,
+
+    CONSTRAINT pk_customers_1 primary key(cus_id),
+
+    CONSTRAINT fk_customers_1 foreign key(city_id) references cities(city_id)
+  );
+
+CREATE INDEX ix_customers_1 ON customers(cus_id);
+CREATE INDEX ix_customers_2 ON customers(city_id);
+
+#-------------------------------------------------------------
+#Tabela - invoices
+#-------------------------------------------------------------
+
+CREATE TABLE invoices
+  (
+    invoice_number  integer        not null,
+    pay_code        varchar(4)     not null,
+    cus_id          integer        not null,
+    buy_code        varchar(4)     not null,
+    inv_date        date           not null,
+    inv_price       numeric(8,2)   not null,
+
+    CONSTRAINT pk_invoices_1 primary key(invoice_number,pay_code,cus_id),
+
+    CONSTRAINT fk_invoices_1 foreign key(pay_code) references payment_methods(pay_code),
+    CONSTRAINT fk_invoices_2 foreign key(cus_id) references customers(cus_id),
+    CONSTRAINT fk_invoices_3 foreign key(buy_code) references buy_methods(buy_code)
+  );
+
+CREATE INDEX ix_invoices_1 ON invoices(invoice_number,pay_code,cus_id);
+CREATE INDEX ix_invoices_2 ON invoices(pay_code);
+CREATE INDEX ix_invoices_3 ON invoices(cus_id);
+CREATE INDEX ix_invoices_4 ON invoices(buy_code);
+
+#-------------------------------------------------------------
+#Tabela - invoices_detail
+#-------------------------------------------------------------
+
+CREATE TABLE invoices_detail
+  (
+    invoice_number  integer        not null,
+    linenr          integer        not null,
+    pay_code        varchar(4)     not null,
+    cus_id          integer        not null,
+    pro_code        varchar(8)     not null,
+    man_code        varchar(3)     not null,
+    cant_prod       integer,
+    price_unit      numeric(6,2),
+    price           numeric(8,2),
+
+    CONSTRAINT pk_invoices_detail_1 primary key(invoice_number,linenr,pay_code,cus_id,pro_code,man_code),
+
+    CONSTRAINT fk_invoices_detail_1 foreign key(invoice_number,pay_code,cus_id) references invoices(invoice_number,pay_code,cus_id),
+    CONSTRAINT fk_invoices_detail_2 foreign key(pro_code,man_code) references products(pro_code,man_code)
+  );
+
+CREATE INDEX ix_invoices_detail_1 ON invoices_detail(invoice_number,linenr,pay_code,cus_id,pro_code,man_code);
+CREATE INDEX ix_invoices_detail_2 ON invoices_detail(invoice_number,pay_code,cus_id);
+CREATE INDEX ix_invoices_detail_3 ON invoices_detail(pro_code,man_code);</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL DW</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>pdi_mysql_conn</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>drop database IF exists datawarehouse_olap;
+
+#
+# Bases de dados OLAP para Treinamento Pentaho CE
+#
+
+CREATE DATABASE  `datawarehouse_olap` ;
+
+USE `datawarehouse_olap`;
+
+
+CREATE TABLE `dim_cliente` (
+  `fk_cliente` int(8) NOT NULL,
+  `cod_cliente` int(8) default NULL,
+  `nome` varchar(50) default NULL,
+  `telefone` varchar(100) default NULL,
+  `sexo` varchar(9)  default NULL,
+  `estado_civil` varchar(20) default NULL,
+  `endereco` varchar(40)  default NULL,
+  `data_inicial` date default NULL,
+  `data_final` date default NULL,
+  `versao` int(10) default NULL,
+  PRIMARY KEY  (`fk_cliente`)
+) ENGINE=InnoDB;
+
+
+
+CREATE TABLE `dim_produto` (
+  `fk_produto` int(8) NOT NULL,
+  `codigo_produto` int(8) default NULL,
+  `descricao` varchar(30) default NULL,
+  `linha` varchar(30)  default NULL,
+  `fornecedor` varchar(50)  NOT NULL,
+  PRIMARY KEY  (`fk_produto`)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE `dim_regiao` (
+  `fk_regiao` int(8) NOT NULL,
+  `cidade` varchar(50) default NULL,
+  `estado` varchar(2) default NULL,
+  `regiao` varchar(20)default NULL,
+  PRIMARY KEY  (`fk_regiao`)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE `dim_tempo` (
+  `fk_tempo` int(11) NOT NULL,
+  `mes` int(8) default NULL,
+  `trimestre` int(8) default NULL,
+  `ano` int(8) default NULL,
+  `data` date default NULL,
+  `descmes` varchar(3) default NULL,
+  PRIMARY KEY  (`fk_tempo`)
+) ENGINE=InnoDB;
+
+
+CREATE TABLE  `dim_vendedor` (
+  `fk_vendedor` int(8) NOT NULL,
+  `vendedor` varchar(20) default NULL,
+  `vlr_comissao` double default NULL,
+  `cod_vendedor` int(8) default NULL,
+  PRIMARY KEY  (`fk_vendedor`)
+) ENGINE=InnoDB ;
+
+
+CREATE TABLE `fato_pedidos` (
+  `fk_cliente` int(8) NOT NULL,
+  `fk_produto` int(11) NOT NULL,
+  `fk_regiao` int(11) NOT NULL,
+  `fk_tempo` int(8) NOT NULL,
+  `fk_vendedor` int(8) NOT NULL,
+  `qtd_venda` int(8) NOT NULL,
+  `vlr_venda` float(17,0) NOT NULL
+) ENGINE=InnoDB;
+</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>
