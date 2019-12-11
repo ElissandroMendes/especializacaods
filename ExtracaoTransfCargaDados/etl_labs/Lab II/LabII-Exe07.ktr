@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>lab2_ex7</name>
+    <name>LabII-Exe07</name>
     <description />
     <extended_description />
     <trans_version />
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -427,18 +428,28 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019/11/30 13:03:44.171</created_date>
+    <created_date>2019/12/10 21:05:00.092</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019/11/30 13:03:44.171</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2019/12/10 21:05:00.092</modified_date>
+    <key_for_session_key />
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <order>
     <hop>
-      <from>Web Services Deputados</from>
+      <from>Web services Deputados</from>
       <to>Get data from XML</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML 2</from>
+      <to>Microsoft Excel output 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Web services Detalhes Deputados</from>
+      <to>Get data from XML 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -448,23 +459,13 @@
     </hop>
     <hop>
       <from>Delay row</from>
-      <to>Web Services Detalhes Deputados</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Web Services Detalhes Deputados</from>
-      <to>Get data from XML 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML 2</from>
-      <to>Microsoft Excel output</to>
+      <to>Web services Detalhes Deputados</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Delay row</name>
-    <type>Delay</type>
+    <name>Web services Deputados</name>
+    <type>WebServiceLookup</type>
     <description />
     <distribute>Y</distribute>
     <custom_distribution />
@@ -473,8 +474,32 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <timeout>1</timeout>
-    <scaletime>seconds</scaletime>
+    <wsURL>https://www.camara.leg.br/SitCamaraWS/Deputados.asmx?wsdl</wsURL>
+    <wsOperation>ObterDeputados</wsOperation>
+    <wsOperationRequest />
+    <wsOperationNamespace>https://www.camara.gov.br/SitCamaraWS/Deputados</wsOperationNamespace>
+    <wsInFieldContainer />
+    <wsInFieldArgument />
+    <wsOutFieldContainer>ObterDeputadosResult</wsOutFieldContainer>
+    <wsOutFieldArgument>ObterDeputadosResult</wsOutFieldArgument>
+    <proxyHost />
+    <proxyPort />
+    <httpLogin />
+    <httpPassword />
+    <callStep>1000</callStep>
+    <passingInputData>Y</passingInputData>
+    <compatible>N</compatible>
+    <repeating_element>ObterDeputadosResult</repeating_element>
+    <reply_as_string>N</reply_as_string>
+    <fieldsIn>
+      </fieldsIn>
+    <fieldsOut>
+      <field>
+        <name>ObterDeputadosResult</name>
+        <wsName>ObterDeputadosResult</wsName>
+        <xsdType>any</xsdType>
+      </field>
+    </fieldsOut>
     <attributes />
     <cluster_schema />
     <remotesteps>
@@ -484,8 +509,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>176</yloc>
+      <xloc>192</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -800,8 +825,35 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>80</yloc>
+      <xloc>400</xloc>
+      <yloc>100</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Delay row</name>
+    <type>Delay</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <timeout>800</timeout>
+    <scaletime>milliseconds</scaletime>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -838,246 +890,6 @@
     </file>
     <fields>
       <field>
-        <name>numLegislatura</name>
-        <xpath>numLegislatura</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>email</name>
-        <xpath>email</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeProfissao</name>
-        <xpath>nomeProfissao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataNascimento</name>
-        <xpath>dataNascimento</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataFalecimento</name>
-        <xpath>dataFalecimento</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ufRepresentacaoAtual</name>
-        <xpath>ufRepresentacaoAtual</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>situacaoNaLegislaturaAtual</name>
-        <xpath>situacaoNaLegislaturaAtual</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ideCadastro</name>
-        <xpath>ideCadastro</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idParlamentarDeprecated</name>
-        <xpath>idParlamentarDeprecated</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeParlamentarAtual</name>
-        <xpath>nomeParlamentarAtual</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeCivil</name>
-        <xpath>nomeCivil</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>sexo</name>
-        <xpath>sexo</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idPartido</name>
-        <xpath>partidoAtual/idPartido</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>sigla</name>
-        <xpath>partidoAtual/sigla</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nome</name>
-        <xpath>partidoAtual/nome</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>numero</name>
-        <xpath>gabinete/numero</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
         <name>anexo</name>
         <xpath>gabinete/anexo</xpath>
         <element_type>node</element_type>
@@ -1093,473 +905,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>telefone</name>
-        <xpath>gabinete/telefone</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idOrgaoLegislativoCD</name>
-        <xpath>comissoes/comissao/idOrgaoLegislativoCD</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>siglaComissao</name>
-        <xpath>comissoes/comissao/siglaComissao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeComissao</name>
-        <xpath>comissoes/comissao/nomeComissao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>condicaoMembro</name>
-        <xpath>comissoes/comissao/condicaoMembro</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataEntrada</name>
-        <xpath>comissoes/comissao/dataEntrada</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataSaida</name>
-        <xpath>comissoes/comissao/dataSaida</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>comissoes</name>
-        <xpath>comissoes</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idOrgaoLegislativoCD</name>
-        <xpath>cargosComissoes/cargoComissoes/idOrgaoLegislativoCD</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>siglaComissao</name>
-        <xpath>cargosComissoes/cargoComissoes/siglaComissao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeComissao</name>
-        <xpath>cargosComissoes/cargoComissoes/nomeComissao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCargo</name>
-        <xpath>cargosComissoes/cargoComissoes/idCargo</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>nomeCargo</name>
-        <xpath>cargosComissoes/cargoComissoes/nomeCargo</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataEntrada</name>
-        <xpath>cargosComissoes/cargoComissoes/dataEntrada</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataSaida</name>
-        <xpath>cargosComissoes/cargoComissoes/dataSaida</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
         <name>cargosComissoes</name>
         <xpath>cargosComissoes</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>siglaUFRepresentacao</name>
-        <xpath>periodosExercicio/periodoExercicio/siglaUFRepresentacao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>situacaoExercicio</name>
-        <xpath>periodosExercicio/periodoExercicio/situacaoExercicio</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataInicio</name>
-        <xpath>periodosExercicio/periodoExercicio/dataInicio</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataFim</name>
-        <xpath>periodosExercicio/periodoExercicio/dataFim</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCausaFimExercicio</name>
-        <xpath>periodosExercicio/periodoExercicio/idCausaFimExercicio</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>descricaoCausaFimExercicio</name>
-        <xpath>periodosExercicio/periodoExercicio/descricaoCausaFimExercicio</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCadastroParlamentarAnterior</name>
-        <xpath>periodosExercicio/periodoExercicio/idCadastroParlamentarAnterior</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>periodosExercicio</name>
-        <xpath>periodosExercicio</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>historicoNomeParlamentar</name>
-        <xpath>historicoNomeParlamentar</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>filiacoesPartidarias</name>
-        <xpath>filiacoesPartidarias</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idHistoricoLider</name>
-        <xpath>historicoLider/itemHistoricoLider/idHistoricoLider</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>idCargoLideranca</name>
-        <xpath>historicoLider/itemHistoricoLider/idCargoLideranca</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>descricaoCargoLideranca</name>
-        <xpath>historicoLider/itemHistoricoLider/descricaoCargoLideranca</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>numOrdemCargo</name>
-        <xpath>historicoLider/itemHistoricoLider/numOrdemCargo</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataDesignacao</name>
-        <xpath>historicoLider/itemHistoricoLider/dataDesignacao</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>dataTermino</name>
-        <xpath>historicoLider/itemHistoricoLider/dataTermino</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1588,8 +935,263 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>siglaUnidadeLideranca</name>
-        <xpath>historicoLider/itemHistoricoLider/siglaUnidadeLideranca</xpath>
+        <name>comissoes</name>
+        <xpath>comissoes</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>condicaoMembro</name>
+        <xpath>comissoes/comissao/condicaoMembro</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataDesignacao</name>
+        <xpath>historicoLider/itemHistoricoLider/dataDesignacao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataEntrada</name>
+        <xpath>comissoes/comissao/dataEntrada</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataEntrada</name>
+        <xpath>cargosComissoes/cargoComissoes/dataEntrada</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataFalecimento</name>
+        <xpath>dataFalecimento</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataFim</name>
+        <xpath>periodosExercicio/periodoExercicio/dataFim</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataInicio</name>
+        <xpath>periodosExercicio/periodoExercicio/dataInicio</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataNascimento</name>
+        <xpath>dataNascimento</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataSaida</name>
+        <xpath>comissoes/comissao/dataSaida</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataSaida</name>
+        <xpath>cargosComissoes/cargoComissoes/dataSaida</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>dataTermino</name>
+        <xpath>historicoLider/itemHistoricoLider/dataTermino</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>descricaoCargoLideranca</name>
+        <xpath>historicoLider/itemHistoricoLider/descricaoCargoLideranca</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>descricaoCausaFimExercicio</name>
+        <xpath>periodosExercicio/periodoExercicio/descricaoCausaFimExercicio</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>email</name>
+        <xpath>email</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>filiacoesPartidarias</name>
+        <xpath>filiacoesPartidarias</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>historicoLider</name>
+        <xpath>historicoLider</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>historicoNomeParlamentar</name>
+        <xpath>historicoNomeParlamentar</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1618,8 +1220,458 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>historicoLider</name>
-        <xpath>historicoLider</xpath>
+        <name>idCadastroParlamentarAnterior</name>
+        <xpath>periodosExercicio/periodoExercicio/idCadastroParlamentarAnterior</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idCargo</name>
+        <xpath>cargosComissoes/cargoComissoes/idCargo</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idCargoLideranca</name>
+        <xpath>historicoLider/itemHistoricoLider/idCargoLideranca</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idCausaFimExercicio</name>
+        <xpath>periodosExercicio/periodoExercicio/idCausaFimExercicio</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idHistoricoLider</name>
+        <xpath>historicoLider/itemHistoricoLider/idHistoricoLider</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idOrgaoLegislativoCD</name>
+        <xpath>comissoes/comissao/idOrgaoLegislativoCD</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idOrgaoLegislativoCD</name>
+        <xpath>cargosComissoes/cargoComissoes/idOrgaoLegislativoCD</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idParlamentarDeprecated</name>
+        <xpath>idParlamentarDeprecated</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>idPartido</name>
+        <xpath>partidoAtual/idPartido</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ideCadastro</name>
+        <xpath>ideCadastro</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nome</name>
+        <xpath>partidoAtual/nome</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeCargo</name>
+        <xpath>cargosComissoes/cargoComissoes/nomeCargo</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeCivil</name>
+        <xpath>nomeCivil</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeComissao</name>
+        <xpath>comissoes/comissao/nomeComissao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeComissao</name>
+        <xpath>cargosComissoes/cargoComissoes/nomeComissao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeParlamentarAtual</name>
+        <xpath>nomeParlamentarAtual</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>nomeProfissao</name>
+        <xpath>nomeProfissao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>numLegislatura</name>
+        <xpath>numLegislatura</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>numOrdemCargo</name>
+        <xpath>historicoLider/itemHistoricoLider/numOrdemCargo</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>numero</name>
+        <xpath>gabinete/numero</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>periodosExercicio</name>
+        <xpath>periodosExercicio</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>sexo</name>
+        <xpath>sexo</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>sigla</name>
+        <xpath>partidoAtual/sigla</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>siglaComissao</name>
+        <xpath>comissoes/comissao/siglaComissao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>siglaComissao</name>
+        <xpath>cargosComissoes/cargoComissoes/siglaComissao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>siglaUFRepresentacao</name>
+        <xpath>periodosExercicio/periodoExercicio/siglaUFRepresentacao</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>siglaUnidadeLideranca</name>
+        <xpath>historicoLider/itemHistoricoLider/siglaUnidadeLideranca</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>situacaoExercicio</name>
+        <xpath>periodosExercicio/periodoExercicio/situacaoExercicio</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>situacaoNaLegislaturaAtual</name>
+        <xpath>situacaoNaLegislaturaAtual</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>telefone</name>
+        <xpath>gabinete/telefone</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ufRepresentacaoAtual</name>
+        <xpath>ufRepresentacaoAtual</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1634,7 +1686,7 @@
       </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>/ObterDetalhesDeputadoResult/Deputados/Deputado</loopxpath>
+    <loopxpath>/ObterDetalhesDeputadoResult/deputados/deputado</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>N</IsAFile>
     <XmlField>ObterDetalhesDeputadoResult</XmlField>
@@ -1656,13 +1708,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>352</yloc>
+      <xloc>704</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Microsoft Excel output</name>
+    <name>Microsoft Excel output 2</name>
     <type>ExcelOutput</type>
     <description />
     <distribute>Y</distribute>
@@ -1674,11 +1726,11 @@
     </partitioning>
     <header>Y</header>
     <footer>N</footer>
-    <encoding />
+    <encoding>UTF-8</encoding>
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>file</name>
+      <name>/Users/elissandro/Projetos/Especialização/ExtracaoTransfCargaDados/etl_labs/Lab II/resultadoExe07</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1703,11 +1755,6 @@
     </template>
     <fields>
       <field>
-        <name>ObterDetalhesDeputadoResult</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
         <name>anexo</name>
         <type>Integer</type>
         <format />
@@ -1718,22 +1765,12 @@
         <format />
       </field>
       <field>
-        <name>codOrcamento</name>
-        <type>Integer</type>
-        <format />
-      </field>
-      <field>
         <name>codigoUnidadeLideranca</name>
         <type>String</type>
         <format />
       </field>
       <field>
         <name>comissoes</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
-        <name>condicao</name>
         <type>String</type>
         <format />
       </field>
@@ -1803,16 +1840,6 @@
         <format />
       </field>
       <field>
-        <name>fone</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
-        <name>gabinete</name>
-        <type>Integer</type>
-        <format />
-      </field>
-      <field>
         <name>historicoLider</name>
         <type>String</type>
         <format />
@@ -1858,7 +1885,7 @@
         <format />
       </field>
       <field>
-        <name>idParlamentar</name>
+        <name>idOrgaoLegislativoCD_1</name>
         <type>Integer</type>
         <format />
       </field>
@@ -1874,11 +1901,6 @@
       </field>
       <field>
         <name>ideCadastro</name>
-        <type>Integer</type>
-        <format />
-      </field>
-      <field>
-        <name>matricula</name>
         <type>Integer</type>
         <format />
       </field>
@@ -1899,11 +1921,6 @@
       </field>
       <field>
         <name>nomeComissao</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
-        <name>nomeParlamentar</name>
         <type>String</type>
         <format />
       </field>
@@ -1930,11 +1947,6 @@
       <field>
         <name>numero</name>
         <type>Integer</type>
-        <format />
-      </field>
-      <field>
-        <name>partido</name>
-        <type>String</type>
         <format />
       </field>
       <field>
@@ -1978,32 +1990,12 @@
         <format />
       </field>
       <field>
-        <name>suplente</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
         <name>telefone</name>
         <type>String</type>
         <format />
       </field>
       <field>
-        <name>titular</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
-        <name>uf</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
         <name>ufRepresentacaoAtual</name>
-        <type>String</type>
-        <format />
-      </field>
-      <field>
-        <name>urlFoto</name>
         <type>String</type>
         <format />
       </field>
@@ -2034,64 +2026,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>320</yloc>
+      <xloc>288</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Web Services Deputados</name>
-    <type>WebServiceLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <wsURL>https://www.camara.leg.br/SitCamaraWS/Deputados.asmx?wsdl</wsURL>
-    <wsOperation>ObterDeputados</wsOperation>
-    <wsOperationRequest />
-    <wsOperationNamespace>https://www.camara.gov.br/SitCamaraWS/Deputados</wsOperationNamespace>
-    <wsInFieldContainer />
-    <wsInFieldArgument />
-    <wsOutFieldContainer>ObterDeputadosResult</wsOutFieldContainer>
-    <wsOutFieldArgument>ObterDeputadosResult</wsOutFieldArgument>
-    <proxyHost />
-    <proxyPort />
-    <httpLogin />
-    <httpPassword />
-    <callStep>1</callStep>
-    <passingInputData>N</passingInputData>
-    <compatible>N</compatible>
-    <repeating_element>ObterDeputadosResult</repeating_element>
-    <reply_as_string>N</reply_as_string>
-    <fieldsIn>
-      </fieldsIn>
-    <fieldsOut>
-      <field>
-        <name>ObterDeputadosResult</name>
-        <wsName>ObterDeputadosResult</wsName>
-        <xsdType>any</xsdType>
-      </field>
-    </fieldsOut>
-    <attributes />
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>128</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Web Services Detalhes Deputados</name>
+    <name>Web services Detalhes Deputados</name>
     <type>WebServiceLookup</type>
     <description />
     <distribute>Y</distribute>
@@ -2141,8 +2082,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>336</yloc>
+      <xloc>800</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
