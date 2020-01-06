@@ -1,0 +1,98 @@
+filme;Ano;Genero;Diretor;Atores
+Persepolis;2007;Animation | Comedy | Drama | History;Vincent Paronnaud, Marjane Satrapi;Chiara Mastroianni, Catherine Deneuve, Danielle Darrieux
+Trois couleurs - Rouge;1994;Drama;Krzysztof Kieslowski;Irène Jacob, Jean-Louis Trintignant, Frédérique Feder, Jean-Pierre Lorit, Samuel Le Bihan
+Les Misérables;1933;Drama | History;Raymond Bernard;
+Au revoir, les enfants;1987;Drama;Louis Malle;
+La France;2007;Drama | Musical | Romance | War;Serge Bozon;Sylvie Testud, Pascal Greggory, Guillaume Verdier
+L'Atalante;1934;Drama | Romance;;Michel Simon, Dita Parlo, Jean Dasté
+La môme;2007;Biography | Drama | Music;Olivier Dahan;Marion Cotillard, Sylvie Testud, Pascal Greggory, Emmanuelle Seigner, Jean-Paul Rouve, Gérard Depardieu
+MR 73;2008;Crime | Drama;;Daniel Auteuil, Olivia Bonamy, Catherine Marchal, Francis Renaud
+Manon Des Sources;;Drama | Romance;Claude Berri;Yves Montand, Daniel Auteuil, Emmanuelle Béart
+Un Coeur en Hiver;1992;Drama | Romance | Music;Claude Sautet;Daniel Auteuil, Emmanuelle Béart, André Dussollier
+Les Voleurs;1996;Crime | Drama | Romance;André Téchiné;Catherine Deneuve, Daniel Auteuil, Laurence Côte, Benoît Magimel
+Caché;2005;;Michael Haneke;Daniel Auteuil, Juliette Binoche, Maurice Bénichou
+Jean de Florette;1986;Historical drama;Claude Berri;Yves Montand, Gérard Depardieu, Daniel Auteuil
+Le Ballon rouge;1956;Fantasy | Comedy | Drama;;
+Casque d'or;1952;Drama | Romance;Jacques Becker;Simone Signoret, Serge Reggiani, Claude Dauphin
+Les Misérables;1925;History | Drama;Henri Fescourt;
+Napoléon;1927;History | Biography | Drama;Abel Gance;Albert Dieudonné, Edmond Van Daële, Alexandre Koubitzky, Antonin Artaud, Abel Gance
+Le pornographe;2001;;;Jean-Pierre Leaud
+Je rentre à la maison;2001;Comedy | Drama;Manoel de Oliveira;Michel Piccoli, Catherine Deneuve, John Malkovich
+Les temps qui changent;2004;;André Téchiné;Catherine Deneuve, Gérard Depardieu, Gilbert Melki
+Cyrano de Bergerac;1990;;Jean-Paul Rappeneau;Gerard Depardieu, Anne Brochet, Vincent Perez
+Le promeneur du champ de Mars;2005;;Robert Guédiguian;Michel Bouquet
+Toto le héros;1991;Drama;;Michel Bouquet
+Les Misérables;1958;Drama;Jean-Paul Le Chanois;Jean Gabin, Bernard Blier, Fernand Ledoux
+Nouvelle vague;1990;Drama;;Alain Delon
+Un conte de Noël;2008;Comedy | Drama;Arnaud Desplechin;Catherine Deneuve, Jean-Paul Roussillon, Anne Consigny, Mathieu Amalric, Melvil Poupaud
+Le Cercle rouge;1970;Crime | Drama | Thriller;Jean-Pierre Melville;Alain Delon, André Bourvil, Gian Maria Volonté, Yves Montand, André Ekyan, François Périer
+Cavale;2002;Thriller | Crime | Drama;Lucas Belvaux;Lucas Belvaux, Catherine Frot, Dominique Blanc, Ornella Muti, Gilbert Melki
+À bout de souffle;1960;Crime | Drama | Romance | Thriller;Jean-Luc Godard;Jean-Paul Belmondo, Jean Seberg
+Stavisky...;1974;Crime | Drama;;Jean-Paul Belmondo
+L'Emmerdeur;1973;Comedy;Edouard Molinaro;
+Monte Cristo;1929;Adventure | History | Drama;Henri Fescourt;
+Les Compères;1983;;Francis Veber;Pierre Richard, Gérard Depardieu
+Les Fugitifs;1986;;Francis Veber;Pierre Richard,Gérard Depardieu
+Le Dîner de cons;1998;Comedy;Francis Veber;Thierry Lhermitte, Jacques Villeret
+Gazon Maudit;1995;Comedy;Josiane Balasko;Victoria Abril, Josiane Balasko, Alain Chabat
+Le Retour de Martin Guerre;1982;Historical Drama;Daniel Vigne;Gérard Depardieu, Bernard-Pierre Donnadieu, Nathalie Baye
+La Cage Aux Folles;1978;Comedy;Edouard Molinaro;Ugo Tognazzi, Michel Serrault, Claire Maurier
+Delicatessen;1991;Comedy | Sci-Fi;;Pascal Benezech, Dominique Pinon, Marie-Laure Dougnac
+Belle de Jour;1967;Drama;Luis Buñuel;Catherine Deneuve, Jean Sorel,  Michel Piccoli
+La Belle et la Bête;1946;Drama | Fantasy;;Jean Marais, Josette Day, Mila Parély, Nane Germon, Michel Auclair, Raoul Marco, Marcel André
+Jules et Jim;1961;Drama | Romance;;Jeanne Moreau, Oskar Werner, Henri Serre
+Son frère;2003;Drama;Patrice Chéreau;
+Diva;1981;Thriller | Drama | Music;Jean-Jacques Beineix;Frédéric Andréi, Roland Bertin, Richard Bohringer
+Ma Vie en Rose;1997;Comedy Drama;;Michèle Laroque, Jean-Philippe Écoffey, Hélène Vincent, Georges du Fresne
+Le Scaphandre et le papillon;2007;Biography | Drama;;
+Monsieur Hire;;Drama, Crime, Thriller, Romance;Patrice Leconte;
+La Femme Nikita;;Thriller, Action, Crime, Drama, Romance;Luc Besson;Anne Parillaud, Marc Duret, Patrick Fontana, Alain Lathière, Laura Chéron
+Le Placard;;Commedy Drama;Francis Veber;Daniel Auteuil, Gérard Depardieu, Thierry Lhermitte, Michèle Laroque
+La Reine Margot;;Historical drama;Patrice Chéreau;Isabelle Adjani, Daniel Auteuil, Jean-Hugues Anglade, Vincent Perez, Virna Lisi, Dominique Blanc
+Un condamné à mort s'est échappé;1956;Drama | War;Robert Bresson;François Leterrier
+37°2 le matin;1986;romance | drama;Jean-Jacques Beineix;Jean-Hugues Anglade, Béatrice Dalle, Gérard Darmon
+17 fois Cécile Cassard;2002;Drama;;Béatrice Dalle, Romain Duris, Jeanne Balibar
+Le Grand Bleu;1988;romance | drama;Luc Besson;Rosanna Arquette, Jean-Marc Barr, Jean Reno
+Le Charme discret de la bourgeoisie;1972;Comedy | Drama | Fantasy;Luis Buñuel;Fernando Rey, Paul Frankeur, Delphine Seyrig, Bulle Ogier, Stéphane Audran, Jean-Pierre Cassel, Julien Bertheau, Milena Vukotic, Maria Gabriella Maione, Claude Piéplu, Muni, Pierre Maguelon, François Maistre, Michel Piccoli
+La Controverse de Valladolid;1992;Historical Drama;Jean-Daniel Verhaeghe;Jean-Pierre Marielle, Jean-Louis Trintignant, Jean Carmet, Jean-Michel Dupuis
+Le Colonel Chabert;1994;Drama | Romance;Yves Angelo;Gérard Depardieu, Fanny Ardant, Fabrice Luchini, André Dussollier, Daniel Prévost, Olivier Saladin, Maxime Leroux, Eric Elmosnino, Claude Rich, Romane Bohringer, Julie Depardieu
+Cyrano de Bergerac;1945;Comedy | Drama | Romance;Fernand Rivers;Claude Dauphin
+Amélie;2001;Comedy, Drama, Romance;Jean-Pierre Jeunet;Audrey Tautou, Mathieu Kassovitz
+Les Visiteurs;1993;Fantasy, Comedy;Jean-Marie Poiré;Christian Clavier, Jean Reno, Valérie Lemercier
+Une Hirondelle a Fait Le Printemps;2001;Comedy | Drama;Christian Carion;Michel Serrault, Mathilde Seigner, Jean-Paul Roussillon, Frédéric Pierrot, Marc Berman
+L'Homme orchestre;1900;Comedy | Fantasy;Georges Méliès;Georges Méliès
+La Chinoise;1967;Comedy | Drama;Jean-Luc Godard;
+La Chute de la maison Usher;1928;Drama | Horror | Fantasy;Jean Epstein;
+Les Misérables;1995;Drama | War;Claude Lelouch;Jean-Paul Belmondo, Michel Boujenah, Annie Girardot, Philippe Léotard
+Le Deuxième souffle;2007;Crime | Drama | Thriller;Alain Corneau;Daniel Auteuil, Monica Bellucci, Michel Blanc, Jacques Dutronc
+Trois couleurs - Bleu;1993;Drama;Krzysztof Kieslowski;Juliette Binoche, Benoît Régent, Florence Pernel
+Être et avoir;2002;Documentary;Nicolas Philibert;
+Trois couleurs - Blanc;;Comedy | Drama;Krzysztof Kieslowski;Zbigniew Zamachowski, Julie Delpy
+Les Demoiselles de Rochefort;1967;Musical | Romance;Jacques Demy;Catherine Deneuve, George Chakiris, Françoise Dorléac, Jacques Perrin, Michel Piccoli
+Cet obscur objet du désir;1977;Comedy | Drama;Luis Buñuel;Fernando Rey, Carole Bouquet
+La Veuve de Saint-Pierre;2000;Drama | Romance | History;Patrice Leconte;Juliette Binoche, Daniel Auteuil, Emir Kusturica, Michel Duchaussoy
+Le Couperet;2005;Comedy | Drama | Crime | Thriller;Costa-Gavras;José Garcia, Karin Viard
+5x2;;Drama | Romance;François Ozon;Valeria Bruni Tedeschi, Michael Lonsdale, Antoine Chappey
+Alphaville;1965;Science-Fiction | Thriller;Jean-Luc Godard;
+Le Chagrin et la pitié;1969;Documentary | War;Marcel Ophüls;
+L'Année dernière à Marienbad;1961;Drama | Fantasy | Romance;Alain Resnais;
+13 Tzameti;2005;Crime | Thriller | Drama;Géla Babluani;
+Le Dernier Métro;1980;;Francois Truffaut;
+8 Femmes;2002;Musical | Thriller | Comedy;Francois Ozon;Danielle Darrieux, Catherine Deneuve, Isabelle Huppert, Emmanuelle Béart, Fanny Ardant, Virginie Ledoyen, Ludivine Sagnier
+Les Enfants du Paradis;1945;;Marcel Carne;
+La Discrète Charme de la bourgeoisie;;;Luis Buñuel;
+Le Pianist;2002;War | Drama;Roman Polanski;
+Les quatre cent coups;1959;;Francois Truffaut;
+La Haine;1995;Drama;Mathieu Kassovitz;Vincent Cassel
+Les Fragments d'Antonin;2006;Drama | War;;
+Hiroshima, Mon Amour;1959;;Alain Resnais;
+La double vie de Véronique;1991;;Krzysztof Kieslowski;Irène Jacob, Halina Gryglaszewska, Kalina Jedrusik
+125 rue Montmartre;1959;Crime | Drama | Thriller;Gilles Grangier;Lino Ventura, Andréa Parisy, Alfred Adam, Jean Desailly
+Barbe-bleue;1901;Drama | Fantasy;Georges Méliès;Georges Méliès
+À nous la liberté;1931;Comedy | Musical;René Clair;
+Playtime;1967;Comedy | Fantasy;Jacques Tati;Jacques Tati
+L'Âge d'or;1930;Fantasy;Luis Buñuel;Gaston Modot, Luis Buñuel
+L'Argent;1928;Drama;Robert Bresson;
+The Charles Bukowski Tapes;1985;Documentary;Barbet Schroeder;Charles Bukowski, Linda Lee Bukowski, Barbet Schroeder
+Le Voyage dans la lune;1902;Sci-Fi | Adventure | Fantasy;Georges Méliès;
+Sans soleil;1983;Documentary;Chris Marker;

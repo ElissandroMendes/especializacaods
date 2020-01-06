@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>LabII-Exe04</name>
+    <name>LabIII-Exe02</name>
     <description />
     <extended_description />
     <trans_version />
@@ -427,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2019/12/10 20:23:17.387</created_date>
+    <created_date>2019/12/13 16:52:29.863</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019/12/10 20:23:17.387</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2019/12/13 16:52:29.863</modified_date>
+    <key_for_session_key />
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -447,13 +447,18 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Text file output</to>
+      <from>Stream lookup</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Stream lookup</from>
-      <to>Select values</to>
+      <from>Select values</from>
+      <to>Get system info</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get system info</from>
+      <to>Microsoft Excel output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -515,8 +520,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>172</xloc>
-      <yloc>310</yloc>
+      <xloc>114</xloc>
+      <yloc>306</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3866,8 +3871,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>172</xloc>
-      <yloc>118</yloc>
+      <xloc>114</xloc>
+      <yloc>114</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3883,137 +3888,39 @@
       <schema_name />
     </partitioning>
     <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>conceito_atual</name>
-      </remove>
-      <remove>
-        <name>conceito_ctc</name>
-      </remove>
-      <remove>
-        <name>conceito_rec</name>
-      </remove>
-      <remove>
-        <name>q2_q5</name>
-      </remove>
-      <remove>
-        <name>itens_q2_q5</name>
-      </remove>
-      <remove>
-        <name>itens_q3_q4</name>
-      </remove>
-      <remove>
-        <name>docentes_ano_2001_2003</name>
-      </remove>
-      <remove>
-        <name>docentes_ano_2004_2006</name>
-      </remove>
-      <remove>
-        <name>docentes_ano_2001_2006</name>
-      </remove>
-      <remove>
-        <name>Teses_2001_2003</name>
-      </remove>
-      <remove>
-        <name>Diss_2001_2003</name>
-      </remove>
-      <remove>
-        <name>Teses_2004_2006</name>
-      </remove>
-      <remove>
-        <name>Diss_2004_2006</name>
-      </remove>
-      <remove>
-        <name>Teses_2001_2006</name>
-      </remove>
-      <remove>
-        <name>Diss_2001_2006</name>
-      </remove>
-      <remove>
-        <name>di_te_2001_2003</name>
-      </remove>
-      <remove>
-        <name>di_te_2004_2006</name>
-      </remove>
-      <remove>
-        <name>di_te_2001_2006</name>
-      </remove>
-      <remove>
-        <name>egressos_mestrado_97_01</name>
-      </remove>
-      <remove>
-        <name>egr_m_tit_dou_97_01</name>
-      </remove>
-      <remove>
-        <name>n_esp_dout_97_01</name>
-      </remove>
-      <remove>
-        <name>escore_1</name>
-      </remove>
-      <remove>
-        <name>egressos_dout_97_03</name>
-      </remove>
-      <remove>
-        <name>egressos_doc_ppg_97_03</name>
-      </remove>
-      <remove>
-        <name>n_esp_doc_ppg_97_03</name>
-      </remove>
-      <remove>
-        <name>Escore_2</name>
-      </remove>
-      <remove>
-        <name>doc_ies_dif</name>
-      </remove>
-      <remove>
-        <name>perc_doc_dif_doc_ppg</name>
-      </remove>
-      <remove>
-        <name>bolsistas_prod</name>
-      </remove>
-      <remove>
-        <name>docentes</name>
-      </remove>
-      <remove>
-        <name>perc_bols_doc</name>
-      </remove>
-      <remove>
-        <name>Escore_3</name>
-      </remove>
-      <meta>
-        <name>area</name>
-        <rename>id_area</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask />
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale />
-        <date_format_timezone />
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding />
-        <decimal_symbol />
-        <grouping_symbol />
-        <currency_symbol />
-        <storage_type />
-      </meta>
-      <meta>
+      <field>
         <name>codigo_programa</name>
-        <rename>id_programa</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask />
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale />
-        <date_format_timezone />
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding />
-        <decimal_symbol />
-        <grouping_symbol />
-        <currency_symbol />
-        <storage_type />
-      </meta>
+        <rename>Código do Programa</rename>
+      </field>
+      <field>
+        <name>nome_programa</name>
+        <rename>Nome do Programa</rename>
+      </field>
+      <field>
+        <name>area</name>
+        <rename>Área</rename>
+      </field>
+      <field>
+        <name>id_instituicao</name>
+        <rename>Código da Instituição</rename>
+      </field>
+      <field>
+        <name>ies</name>
+        <rename>Instituição</rename>
+      </field>
+      <field>
+        <name>inicio_mestrado</name>
+        <rename>Início Mestrado</rename>
+      </field>
+      <field>
+        <name>inicio_doutorado</name>
+        <rename>Início Doutorado</rename>
+      </field>
+      <field>
+        <name>conceito_recomendado</name>
+        <rename>Conceito Capes</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <attributes />
     <cluster_schema />
@@ -4024,8 +3931,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>540</xloc>
-      <yloc>230</yloc>
+      <xloc>482</xloc>
+      <yloc>226</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4066,14 +3973,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>364</xloc>
-      <yloc>230</yloc>
+      <xloc>306</xloc>
+      <yloc>226</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
-    <type>TextFileOutput</type>
+    <name>Microsoft Excel output</name>
+    <type>ExcelOutput</type>
     <description />
     <distribute>Y</distribute>
     <custom_distribution />
@@ -4082,132 +3989,128 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
     <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding />
-    <endedLine />
-    <fileNameInField>N</fileNameInField>
-    <fileNameField />
-    <create_parent_folder>Y</create_parent_folder>
+    <encoding>UTF-8</encoding>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>/Users/elissandro/Projetos/Especialização/ExtracaoTransfCargaDados/etl_labs/Lab II/resultadoExe04</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
+      <name>/Users/elissandro/Projetos/Especialização/ExtracaoTransfCargaDados/etl_labs/Lab III/resultadoExe02</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
       <split>N</split>
-      <haspartno>N</haspartno>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
       <date_time_format />
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery />
+      <sheetname>ResultadoCapes</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted 2be98afc86aa7f2e4fa4bfd248bc4f882</password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory />
     </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
     <fields>
       <field>
-        <name>id_area</name>
+        <name>Código do Programa</name>
+        <type>String</type>
+        <format />
+      </field>
+      <field>
+        <name>Nome do Programa</name>
+        <type>String</type>
+        <format />
+      </field>
+      <field>
+        <name>Área</name>
+        <type>Number</type>
+        <format>0.#####</format>
+      </field>
+      <field>
+        <name>Código da Instituição</name>
         <type>Integer</type>
         <format>0</format>
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
       </field>
       <field>
-        <name>id_programa</name>
+        <name>Instituição</name>
         <type>String</type>
         <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
       </field>
       <field>
-        <name>ies</name>
-        <type>String</type>
+        <name>Início Mestrado</name>
+        <type>Number</type>
+        <format>0.#####</format>
+      </field>
+      <field>
+        <name>Início Doutorado</name>
+        <type>Number</type>
+        <format>0.#####</format>
+      </field>
+      <field>
+        <name>Conceito Capes</name>
+        <type>Number</type>
+        <format>0.#####</format>
+      </field>
+      <field>
+        <name>data atualizacaocap</name>
+        <type>Date</type>
         <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
       </field>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image />
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>655</xloc>
+      <yloc>221</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get system info</name>
+    <type>SystemInfo</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
       <field>
-        <name>nome_programa</name>
-        <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>inicio_mestrado</name>
-        <type>Number</type>
-        <format>0.#####</format>
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>inicio_doutorado</name>
-        <type>Number</type>
-        <format>0.#####</format>
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>conceito_recomendado</name>
-        <type>Number</type>
-        <format>0.#####</format>
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>id_instituicao</name>
-        <type>Integer</type>
-        <format>0</format>
-        <currency />
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif />
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <name>data atualizacaocap</name>
+        <type>system date (variable)</type>
       </field>
     </fields>
     <attributes />
@@ -4219,8 +4122,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>732</xloc>
-      <yloc>230</yloc>
+      <xloc>576</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

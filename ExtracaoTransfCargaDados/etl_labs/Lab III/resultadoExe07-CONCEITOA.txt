@@ -1,0 +1,2 @@
+conceito;quantidade
+A;1
