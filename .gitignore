@@ -1,3 +1,5 @@
-
+.RData
+.RHistory
 .DS_Store
+.ipynb_checkpoints/
 NLP/projeto-final-nlp/data/
